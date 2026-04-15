@@ -1,14 +1,14 @@
-// import TailwindCSS from "./TailwindCSS";
-// import UserForm  from "./UserForm";
 import { createRoot } from "react-dom/client";
 import "./tailwind.css";
-import HitungGajiForm from "./HitungGajiForm";
+import FrameworkList from "./FrameworkList"
+import FrameworkListSearchFilter from "./FrameworkListSearchFIlter";
+import ResponsiveDesign from "./ResponsiveDesign";
 
 createRoot(document.getElementById("root"))
     .render(
         <div>
-            <HitungGajiForm/>
+            {/* <FrameworkList/> */}
+            <FrameworkListSearchFilter/>
+            <ResponsiveDesign/>
         </div>
     )
-    {/* <TailwindCSS/> */}
-    {/* <UserForm/> */}

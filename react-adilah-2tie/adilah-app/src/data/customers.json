@@ -1,0 +1,17 @@
+[
+    { "id": "CUST001", "name": "Ahmad Pratama", "email": "ahmad.pratama@email.com", "phone": "0812-3456-7891", "loyalty": "Gold" },
+    { "id": "CUST002", "name": "Siti Nurhaliza", "email": "siti.nurhaliza@email.com", "phone": "0813-2345-6789", "loyalty": "Silver" },
+    { "id": "CUST003", "name": "Budi Santoso", "email": "budi.santoso@email.com", "phone": "0814-1234-5678", "loyalty": "Bronze" },
+    { "id": "CUST004", "name": "Dewi Lestari", "email": "dewi.lestari@email.com", "phone": "0815-9876-5432", "loyalty": "Gold" },
+    { "id": "CUST005", "name": "Eko Prasetyo", "email": "eko.prasetyo@email.com", "phone": "0816-5432-1098", "loyalty": "Silver" },
+    { "id": "CUST006", "name": "Fitri Ayu", "email": "fitri.ayu@email.com", "phone": "0817-6789-0123", "loyalty": "Bronze" },
+    { "id": "CUST007", "name": "Gunawan", "email": "gunawan@email.com", "phone": "0818-7890-1234", "loyalty": "Gold" },
+    { "id": "CUST008", "name": "Hani Wijaya", "email": "hani.wijaya@email.com", "phone": "0819-8901-2345", "loyalty": "Silver" },
+    { "id": "CUST009", "name": "Indra Setiawan", "email": "indra.setiawan@email.com", "phone": "0820-9012-3456", "loyalty": "Bronze" },
+    { "id": "CUST010", "name": "Jasmine Putri", "email": "jasmine.putri@email.com", "phone": "0821-0123-4567", "loyalty": "Gold" },
+    { "id": "CUST011", "name": "Kurniawan", "email": "kurniawan@email.com", "phone": "0822-1234-5678", "loyalty": "Silver" },
+    { "id": "CUST012", "name": "Lina Marlina", "email": "lina.marlina@email.com", "phone": "0823-2345-6789", "loyalty": "Bronze" },
+    { "id": "CUST013", "name": "Muhammad Rafi", "email": "muhammad.rafi@email.com", "phone": "0824-3456-7890", "loyalty": "Gold" },
+    { "id": "CUST014", "name": "Nisa Khoirunnisa", "email": "nisa.khoirunnisa@email.com", "phone": "0825-4567-8901", "loyalty": "Silver" },
+    { "id": "CUST015", "name": "Oscar Maheswara", "email": "oscar.maheswara@email.com", "phone": "0826-5678-9012", "loyalty": "Bronze" }
+]

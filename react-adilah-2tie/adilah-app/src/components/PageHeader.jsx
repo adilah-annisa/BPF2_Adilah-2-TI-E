@@ -1,9 +1,9 @@
-export default function PageHeader() {
+export default function PageHeader({ title, currentPage, buttonText, onButtonClick }) {
     return (
         <div id="pageheader-container" className="flex items-center justify-between p-4">
             <div id="pageheader-left" className="flex flex-col">
                 <span id="page-title" className="text-3xl font-semibold">
-                    Dashboard
+                    {title || "Dashboard"}
                 </span>
                 <div id="breadcrumb-links" className="flex items-center font-medium space-x-2 mt-2">
                     <span id="breadcrumb-home" className="text-gray-500">
@@ -13,13 +13,17 @@ export default function PageHeader() {
                         /
                     </span>
                     <span id="breadcrumb-current" className="text-gray-500">
-                        Order List
+                        {currentPage || title}
                     </span>
                 </div>
             </div>
             <div id="action-button">
-                <button id="add-button" className="bg-hijau text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300">
-                    Add Button
+                <button 
+                    id="add-button" 
+                    onClick={onButtonClick}
+                    className="bg-hijau text-white px-4 py-2 rounded-lg hover:bg-green-600 transition-colors duration-300"
+                >
+                    {buttonText || "Add Button"}
                 </button>
             </div>
         </div>

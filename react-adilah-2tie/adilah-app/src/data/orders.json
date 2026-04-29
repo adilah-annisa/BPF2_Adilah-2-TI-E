@@ -1,0 +1,17 @@
+[
+    { "id": "ORD001", "customer": "Ahmad Pratama", "status": "Completed", "total": 125000, "date": "2026-04-29" },
+    { "id": "ORD002", "customer": "Siti Nurhaliza", "status": "Pending", "total": 89000, "date": "2026-04-28" },
+    { "id": "ORD003", "customer": "Budi Santoso", "status": "Cancelled", "total": 156000, "date": "2026-04-27" },
+    { "id": "ORD004", "customer": "Dewi Lestari", "status": "Completed", "total": 234000, "date": "2026-04-26" },
+    { "id": "ORD005", "customer": "Eko Prasetyo", "status": "Pending", "total": 67000, "date": "2026-04-25" },
+    { "id": "ORD006", "customer": "Fitri Ayu", "status": "Completed", "total": 198000, "date": "2026-04-24" },
+    { "id": "ORD007", "customer": "Gunawan", "status": "Completed", "total": 312000, "date": "2026-04-23" },
+    { "id": "ORD008", "customer": "Hani Wijaya", "status": "Cancelled", "total": 45000, "date": "2026-04-22" },
+    { "id": "ORD009", "customer": "Indra Setiawan", "status": "Pending", "total": 178000, "date": "2026-04-21" },
+    { "id": "ORD010", "customer": "Jasmine Putri", "status": "Completed", "total": 267000, "date": "2026-04-20" },
+    { "id": "ORD011", "customer": "Kurniawan", "status": "Completed", "total": 89000, "date": "2026-04-19" },
+    { "id": "ORD012", "customer": "Lina Marlina", "status": "Pending", "total": 134000, "date": "2026-04-18" },
+    { "id": "ORD013", "customer": "Muhammad Rafi", "status": "Cancelled", "total": 78000, "date": "2026-04-17" },
+    { "id": "ORD014", "customer": "Nisa Khoirunnisa", "status": "Completed", "total": 245000, "date": "2026-04-16" },
+    { "id": "ORD015", "customer": "Oscar Maheswara", "status": "Completed", "total": 189000, "date": "2026-04-15" }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "id": 1,
+    "name": "Green Bowl",
+    "image": "menu-1",
+    "price": 45000
+  },
+  {
+    "id": 2,
+    "name": "Chicken Crispy Sedap",
+    "image": "menu-2",
+    "price": 54000
+  },
+  {
+    "id": 3,
+    "name": "Salmon Teriyaki",
+    "image": "menu-3",
+    "price": 79000
+  },
+  {
+    "id": 4,
+    "name": "Spicy Ramen Flow",
+    "image": "menu-4",
+    "price": 62000
+  },
+  {
+    "id": 5,
+    "name": "Beef Brisket Pan",
+    "image": "menu-5",
+    "price": 85000
+  },
+  {
+    "id": 6,
+    "name": "Truffle Fries",
+    "image": "menu-6",
+    "price": 38000
+  }
+]
+

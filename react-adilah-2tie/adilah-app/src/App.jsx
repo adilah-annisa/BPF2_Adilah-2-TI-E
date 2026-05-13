@@ -10,10 +10,15 @@ const NotFound = React.lazy(() => import("./pages/NotFound"));
 const Login = React.lazy(() => import("./pages/auth/Login"));
 const Register = React.lazy(() => import("./pages/auth/Register"));
 const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
+const Visitor = React.lazy(() => import("./pages/Visitor"));
+const Guest = React.lazy(() => import("./pages/Guest"));
 
-import MainLayout from "../src/layouts/MainLayout";
-import AuthLayout from "../src/layouts/AuthLayout";
-import Loading from "../src/components/Loading";
+
+import MainLayout from "./layouts/MainLayout";
+import AuthLayout from "./layouts/AuthLayout";
+import Loading from "./components/Loading";
+
+
 
 
 export default function App() {
@@ -25,6 +30,10 @@ export default function App() {
               <Route path="orders" element={<Orders />} />
               <Route path="customers" element={<Customers />} />
             </Route>
+
+<Route path="/visitor" element={<Visitor />} />
+<Route path="/guest" element={<Guest />} />
+
             <Route path="*" element={<NotFound />} />
 
             <Route element={<AuthLayout/>}>
@@ -32,8 +41,9 @@ export default function App() {
             <Route path="/register" element={<Register/>} />
             <Route path="/forgot" element={<Forgot/>} />
         </Route>
-      </Routes>  
-      </Suspense>
-  )
+      </Routes>
+    </Suspense>
+  );
 }
+
 

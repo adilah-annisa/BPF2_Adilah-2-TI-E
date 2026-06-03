@@ -13,6 +13,8 @@ const Forgot = React.lazy(() => import("./pages/auth/Forgot"));
 const Visitor = React.lazy(() => import("./pages/Visitor"));
 const Guest = React.lazy(() => import("./pages/Guest"));
 
+const Product = React.lazy(() => import("./pages/Products"));
+
 
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
@@ -29,6 +31,7 @@ export default function App() {
               <Route path="/" element={<Dashboard />} />
               <Route path="orders" element={<Orders />} />
               <Route path="customers" element={<Customers />} />
+              <Route path="products" element={<Product />} />
             </Route>
 
 <Route path="/visitor" element={<Visitor />} />

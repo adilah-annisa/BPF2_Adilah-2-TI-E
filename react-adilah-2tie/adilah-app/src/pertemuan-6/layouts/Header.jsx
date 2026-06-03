@@ -37,8 +37,8 @@ export default function Header() {
                         Hello, <b>Adilah Annisa</b>
                     </span>
                     <img
-                        id="profile-avatar"
-                        src="https://avatar.iran.liara.run/public/28"
+                        src="/img/icon Admin.png"
+                        alt="Icon Admin"
                         className="w-10 h-10 rounded-full"
                     />
                 </div>

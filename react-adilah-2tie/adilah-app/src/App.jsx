@@ -15,23 +15,24 @@ const Guest = React.lazy(() => import("./pages/Guest"));
 
 const Product = React.lazy(() => import("./pages/Products"));
 
+const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
+
+
 
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
 import Loading from "./components/Loading";
 
-
-
-
 export default function App() {
   return (
     <Suspense fallback={<Loading />}>
-       <Routes>
+       <Routes> 
             <Route element={<MainLayout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="orders" element={<Orders />} />
               <Route path="customers" element={<Customers />} />
               <Route path="products" element={<Product />} />
+              <Route path="products/:id" element={<ProductDetail />} />
             </Route>
 
 <Route path="/visitor" element={<Visitor />} />

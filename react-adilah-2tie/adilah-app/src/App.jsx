@@ -6,6 +6,8 @@ const Dashboard = React.lazy(() => import("./pages/Dashboard"));
 const Orders = React.lazy(() => import("./pages/Orders"));
 const Customers = React.lazy(() => import("./pages/Customers"));
 const NotFound = React.lazy(() => import("./pages/NotFound"));
+const Notes = React.lazy(() => import("./pages/Notes"));
+const LoginList = React.lazy(() => import("./pages/LoginList"));
 
 const Login = React.lazy(() => import("./pages/auth/Login"));
 const Register = React.lazy(() => import("./pages/auth/Register"));
@@ -16,8 +18,6 @@ const Guest = React.lazy(() => import("./pages/Guest"));
 const Product = React.lazy(() => import("./pages/Products"));
 
 const ProductDetail = React.lazy(() => import("./pages/ProductDetail"));
-
-
 
 import MainLayout from "./layouts/MainLayout";
 import AuthLayout from "./layouts/AuthLayout";
@@ -33,6 +33,8 @@ export default function App() {
               <Route path="customers" element={<Customers />} />
               <Route path="products" element={<Product />} />
               <Route path="products/:id" element={<ProductDetail />} />
+              <Route path="notes" element={<Notes />} />
+              <Route path="loglist" element={<LoginList />} />
             </Route>
 
 <Route path="/visitor" element={<Visitor />} />

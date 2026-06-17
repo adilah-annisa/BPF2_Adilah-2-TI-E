@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
+import { loginAPI } from "../../services/loginAPI";
 
 export default function Login() {
   const navigate = useNavigate();
@@ -15,10 +15,7 @@ export default function Login() {
 
   const handleChange = (evt) => {
     const { name, value } = evt.target;
-    setDataForm({
-      ...dataForm,
-      [name]: value,
-    });
+    setDataForm({ ...dataForm, [name]: value });
   };
 
   const handleSubmit = async (e) => {
@@ -28,90 +25,82 @@ export default function Login() {
     setError("");
 
     try {
-      const response = await axios.post("https://dummyjson.com/users/login", {
-        username: dataForm.email,
-        password: dataForm.password,
-      });
+      const users = await loginAPI.fetchUserByEmail(dataForm.email);
 
-      if (response.status !== 200) {
-        setError(response?.data?.message || "Login gagal");
+      if (!users || users.length === 0) {
+        setError("Email tidak ditemukan");
+        return;
+      }
+
+      const user = users[0];
+
+      if (user.password !== dataForm.password) {
+        setError("Password salah");
         return;
       }
 
       navigate("/");
     } catch (err) {
       if (err?.response) {
-        setError(err.response.data?.message || "An error occurred");
+        setError(err.response.data?.message || "Login gagal");
       } else {
-        setError(err?.message || "An unknown error occurred");
+        setError(err?.message || "Login gagal");
       }
     } finally {
       setLoading(false);
     }
   };
 
-  const errorInfo = error ? (
-    <div className="bg-red-200 mb-5 p-5 text-sm font-light text-gray-600 rounded flex items-center">
-      <span className="text-red-600 me-2 text-lg">!</span>
-      {error}
-    </div>
-  ) : null;
-
-  const loadingInfo = loading ? (
-    <div className="bg-gray-200 mb-5 p-5 text-sm rounded flex items-center">
-      <span className="me-2 animate-spin inline-block">⏳</span>
-      Mohon Tunggu...
-    </div>
-  ) : null;
-
   return (
     <div>
       <h2 className="text-2xl font-semibold text-gray-700 mb-6 text-center">
-
-        Welcome Back 👋
+        Login to Your Account 🔐
       </h2>
 
-      {errorInfo}
-      {loadingInfo}
+      {error && (
+        <div className="bg-red-200 mb-5 p-5 text-sm font-light text-gray-600 rounded flex items-center">
+          <span className="text-red-600 me-2 text-lg">!</span>
+          {error}
+        </div>
+      )}
 
       <form onSubmit={handleSubmit}>
         <div className="mb-5">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
             Email Address
           </label>
           <input
-            type="text"
+            type="email"
             id="email"
             name="email"
-            onChange={handleChange}
             value={dataForm.email}
-            className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm
-                            placeholder-gray-400"
+            onChange={handleChange}
+            className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400"
             placeholder="you@example.com"
+            required
           />
         </div>
 
         <div className="mb-6">
-          <label className="block text-sm font-medium text-gray-700 mb-1">
+          <label htmlFor="password" className="block text-sm font-medium text-gray-700 mb-1">
             Password
           </label>
           <input
             type="password"
             id="password"
             name="password"
-            onChange={handleChange}
             value={dataForm.password}
-            className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm
-                            placeholder-gray-400"
+            onChange={handleChange}
+            className="w-full px-4 py-2 bg-gray-50 border border-gray-300 rounded-lg shadow-sm placeholder-gray-400"
             placeholder="********"
+            required
           />
         </div>
 
         <button
           type="submit"
           disabled={loading}
-          className="w-full bg-green-500 hover:bg-green-600 text-white font-semibold py-2 px-4
-                        rounded-lg transition duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded-lg transition duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
         >
           {loading ? "Logging in..." : "Login"}
         </button>
